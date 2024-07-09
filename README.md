@@ -1,69 +1,66 @@
-# :package_description
+# Slick Mail
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/:vendor_slug/:package_slug/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/:vendor_slug/:package_slug/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/:vendor_slug/:package_slug/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/:vendor_slug/:package_slug/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/:vendor_slug/:package_slug.svg?style=flat-square)](https://packagist.org/packages/:vendor_slug/:package_slug)
-<!--delete-->
----
-This repo can be used to scaffold a Laravel package. Follow these steps to get started:
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/mansoorkhan/slick-mail.svg?style=flat-square)](https://packagist.org/packages/mansoorkhan/slick-mail)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/mansoorkhan/slick-mail/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/mansoorkhan/slick-mail/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/mansoorkhan/slick-mail.svg?style=flat-square)](https://packagist.org/packages/mansoorkhan/slick-mail)
 
-1. Press the "Use this template" button at the top of this repo to create a new repo with the contents of this skeleton.
-2. Run "php ./configure.php" to run a script that will replace all placeholders throughout all the files.
-3. Have fun creating your package.
-4. If you need help creating a package, consider picking up our <a href="https://laravelpackage.training">Laravel Package Training</a> video course.
----
-<!--/delete-->
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
+Slick Mail is a simple and minimal mail theme / template for Laravel applications. It provides a fresh look, dark mode support and configuration options to set primary color and logo without publishing the views.
 
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/:package_name.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/:package_name)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+![](./slick-mail-light.png)
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require :vendor_slug/:package_slug
+composer require mansoorkhan/slick-mail
 ```
 
-You can publish and run the migrations with:
+## Configuration
 
-```bash
-php artisan vendor:publish --tag=":package_slug-migrations"
-php artisan migrate
-```
-
-You can publish the config file with:
-
-```bash
-php artisan vendor:publish --tag=":package_slug-config"
-```
-
-This is the contents of the published config file:
+Once you have installed the package, you will need to instruct Laravel to load the mail views from Slick Mail. You can do so by adding following configuration to `config/mail.php` file.
 
 ```php
-return [
-];
+'markdown' => [
+    'paths' => [
+        __DIR__.'/../vendor/mansoor/slick-mail/resources/views',
+    ],
+]
 ```
 
-Optionally, you can publish the views using
+That's it! You should be able to see a new theme in your emails.
+
+The package provides a configuration file which allows you to change the primary color and the mail logo. You can publish the config file using:
 
 ```bash
-php artisan vendor:publish --tag=":package_slug-views"
+php artisan vendor:publish --tag="slick-mail-config"
 ```
 
-## Usage
+## Customization
+
+You may customize the Slick Mail components and the theme CSS file. It is very similar to how you would do it for the default Laravel mail. You will need to publish the slick mail views and apply your changes.
+
+You can publish the views using
+
+```bash
+php artisan vendor:publish --tag="slick-mail-views"
+```
+
+Make sure to update the `config/mail.php` to point to the newly published views.
 
 ```php
-$variable = new VendorName\Skeleton();
-echo $variable->echoPhrase('Hello, VendorName!');
+'markdown' => [
+    'paths' => [
+        resource_path('views/vendor/slick-mail'),
+    ],
+]
 ```
+
+## Dark mode preview
+
+Here is how the dark mode looks like:
+
+![](./slick-mail-dark.png)
 
 ## Testing
 
@@ -85,7 +82,7 @@ Please review [our security policy](../../security/policy) on how to report secu
 
 ## Credits
 
-- [:author_name](https://github.com/:author_username)
+- [Mansoor Khan](https://github.com/mansoorkhan)
 - [All Contributors](../../contributors)
 
 ## License
