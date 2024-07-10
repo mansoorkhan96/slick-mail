@@ -6,7 +6,7 @@
 
 Slick Mail is a simple and minimal mail theme / template for Laravel applications. It provides a fresh look, dark mode support and configuration options to set primary color and logo without publishing the views.
 
-![](./slick-mail-light.png)
+![](./screenshot.png)
 
 ## Installation
 
@@ -55,12 +55,6 @@ Make sure to update the `config/mail.php` to point to the newly published views.
     ],
 ]
 ```
-
-## Dark mode preview
-
-Here is how the dark mode looks like:
-
-![](./slick-mail-dark.png)
 
 ## Testing
 
