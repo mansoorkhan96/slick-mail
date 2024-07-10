@@ -16,4 +16,11 @@ class SlickMailServiceProvider extends ServiceProvider
             __DIR__.'/../resources/views' => resource_path('views/vendor/slick-mail'),
         ], 'slick-mail-views');
     }
+
+    public function register(): void
+    {
+        $this->mergeConfigFrom(
+            __DIR__.'/../config/slick-mail.php', 'slick-mail'
+        );
+    }
 }
