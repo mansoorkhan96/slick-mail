@@ -1,8 +1,8 @@
 # Slick Mail
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/mansoorkhan/slick-mail.svg?style=flat-square)](https://packagist.org/packages/mansoorkhan/slick-mail)
-[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/mansoorkhan/slick-mail/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/mansoorkhan/slick-mail/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/mansoorkhan/slick-mail.svg?style=flat-square)](https://packagist.org/packages/mansoorkhan/slick-mail)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/mansoor/slick-mail.svg?style=flat-square)](https://packagist.org/packages/mansoor/slick-mail)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/mansoorkhan96/slick-mail/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/mansoorkhan96/slick-mail/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/mansoor/slick-mail.svg?style=flat-square)](https://packagist.org/packages/mansoor/slick-mail)
 
 Slick Mail is a simple and minimal mail theme / template for Laravel applications. It provides a fresh look, dark mode support and configuration options to set primary color and logo without publishing the views.
 
